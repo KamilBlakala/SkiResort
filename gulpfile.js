@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const clean = require('gulp-clean');
+const concat = require('gulp-concat');
 // const kit = require('gulp-kit');
 
 const paths = {
@@ -42,6 +43,7 @@ function javaScript(done) {
 				presets: ['@babel/env'],
 			})
 		)
+		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write())

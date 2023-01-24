@@ -1,4 +1,72 @@
+@import 'mixins';
 nav {
+	.burger-btn {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		padding: 1em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 1000;
+		&__box {
+			position: relative;
+			width: 40px;
+			height: 30px;
+		}
+		&__bars-one,
+		&__bars-two,
+		&__bars-three {
+			@include burgerBtn;
+			width: 100%;
+			transition: all 0.5s linear;
+			transform-origin: 1px;
+		}
+		&__bars {
+			&-one {
+				transform: rotate(0);
+			}
+			&-two {
+				top: 13px;
+				opacity: 1;
+				transform: translateX(0);
+			}
+			&-three {
+				top: 27px;
+				transform: rotate(0);
+			}
+		}
+		.open {
+			.burger-btn__bars-one {
+				transform: rotate(45deg);
+			}
+			.burger-btn__bars-two {
+				top: 13px;
+				opacity: 0;
+				transform: translateX(50px);
+			}
+			.burger-btn__bars-three {
+				top: 27px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	.burger-open {
+		.burger-btn {
+			&__bars {
+				&-one {
+					transform: rotate(45deg);
+				}
+				&-two {
+					opacity: 0;
+					transform: translateX(20px);
+				}
+				&-three {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
 	ul {
 		display: flex;
 		justify-content: center;

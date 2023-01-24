@@ -1,0 +1,2 @@
+# SkiResort
+SkiResort landing page

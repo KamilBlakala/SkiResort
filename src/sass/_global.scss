@@ -1,0 +1,31 @@
+@import 'reset';
+@import 'colors';
+@import 'nav';
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 1.4;
+	font-family: 'Montserrat', sans-serif;
+}
+
+* {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.container {
+	max-width: 1370px;
+	margin: 0 auto;
+	background-color: $primary;
+	padding: 0 20px;
+}

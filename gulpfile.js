@@ -11,7 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const clean = require('gulp-clean');
-const kit = require('gulp-kit');
+// const kit = require('gulp-kit');
 
 const paths = {
 	html: './html/**/*.kit',
@@ -25,12 +25,12 @@ const paths = {
 };
 function sassCompiler(done) {
 	src(paths.sass)
-		.pipe(sourcemaps.init())
+		// .pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(cssNano())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write())
+		// .pipe(sourcemaps.write())
 		.pipe(dest(paths.sassDest));
 	done();
 }
@@ -53,10 +53,10 @@ function convertImages(done) {
 	done();
 }
 //FOR MORE PAGES need to add watch and main function - > parallel
-function handleKits(done) {
-	src(paths.html).pipe(kit()).pipe(dest('./'));
-	done();
-}
+// function handleKits(done) {
+// 	src(paths.html).pipe(kit()).pipe(dest('./'));
+// 	done();
+// }
 function cleanStuff(done) {
 	src(paths.dist, { read: false }).pipe(clean());
 	done();

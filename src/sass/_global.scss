@@ -22,6 +22,11 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
+	cursor: pointer;
+}
+ul {
+	list-style: none;
+	list-style-position: inside;
 }
 .container {
 	max-width: 1370px;

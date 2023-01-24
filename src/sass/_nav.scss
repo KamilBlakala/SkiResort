@@ -2,17 +2,25 @@ nav {
 	ul {
 		display: flex;
 		justify-content: center;
-		list-style: none;
-		list-style-position: inside;
+		flex-direction: column;
 		li {
-			width: 20%;
-			// padding: 20px;
+			width: 100%;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			position: relative;
 			a {
+				color: $white;
+				font-weight: 700;
 				display: inline-block;
-				width: 100%;
-				height: 100%;
-				cursor: pointer;
-				padding: 20px;
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 	}

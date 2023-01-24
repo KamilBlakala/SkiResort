@@ -3,6 +3,7 @@ nav {
 	position: relative;
 	.navListItems {
 		transform: translateX(-150%);
+		//ddodaj transition
 		&.active {
 			transform: translateX(0%);
 		}

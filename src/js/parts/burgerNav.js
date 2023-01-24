@@ -4,7 +4,7 @@ const navHandler = document.querySelector('.navListItems');
 
 const handleNav = () => {
 	brgBars.classList.toggle('open');
-	navHandler.classList.toggle('.active');
+	navHandler.classList.toggle('active');
 };
 
 navBtn.addEventListener('click', handleNav);

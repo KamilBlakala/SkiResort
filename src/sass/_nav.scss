@@ -2,9 +2,9 @@
 nav {
 	position: relative;
 	.navListItems {
-		transform: translateX(0);
+		transform: translateX(-150%);
 		&.active {
-			transform: translateX(0);
+			transform: translateX(0%);
 		}
 	}
 	.burger-btn {
@@ -15,7 +15,7 @@ nav {
 		background: none;
 		border: 1px solid transparent;
 		cursor: pointer;
-		z-index: 1000;
+		z-index: 100;
 		&__box {
 			position: relative;
 			width: 40px;

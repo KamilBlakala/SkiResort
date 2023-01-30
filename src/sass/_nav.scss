@@ -47,6 +47,7 @@
 			padding: 0 10px;
 			border-radius: 8px;
 			a {
+				// position: relative;
 				color: $white;
 				font-weight: 700;
 				display: inline-block;
@@ -58,14 +59,17 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					z-index: 1000;
 					border-radius: 8px;
+					z-index: -1;
 				}
 				@media (hover: hover) {
 					&:hover {
+						transition: color 0.5s linear;
+						z-index: 1001;
 						&::after {
-							transition: all 0.4s linear;
+							transition: all 0.3s linear;
 							border: 1px solid $orangeDark;
+							opacity: 0.9;
 						}
 					}
 				}
